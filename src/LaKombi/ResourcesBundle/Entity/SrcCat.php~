@@ -1,0 +1,61 @@
+<?php
+
+namespace LaKombi\ResourcesBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * LaKombi\ResourcesBundle\Entity\SrcCat
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="LaKombi\ResourcesBundle\Entity\SrcCatRepository")
+ */
+class SrcCat
+{
+    /**
+     * @var integer $id
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string $NameSrcCat
+     *
+     * @ORM\Column(name="NameSrcCat", type="string", length=255)
+     */
+    private $NameSrcCat;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set NameSrcCat
+     *
+     * @param string $nameSrcCat
+     */
+    public function setNameSrcCat($nameSrcCat)
+    {
+        $this->NameSrcCat = $nameSrcCat;
+    }
+
+    /**
+     * Get NameSrcCat
+     *
+     * @return string 
+     */
+    public function getNameSrcCat()
+    {
+        return $this->NameSrcCat;
+    }
+}

@@ -1,0 +1,152 @@
+<?php
+
+namespace LaKombi\ResourcesBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * LaKombi\ResourcesBundle\Entity\Src
+ *
+ * @ORM\Table(name="src")
+ * @ORM\Entity(repositoryClass="LaKombi\ResourcesBundle\Entity\SrcRepository")
+ */
+class Src
+{
+    /**
+     * @var integer $id
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var integer $SrcDataId
+     *
+     * @ORM\OneToOne(targetEntity="srcdata")
+     * @ORM\JoinColumn(name="src_id", referencedColumnName="id")
+     * 
+     * @ORM\Column(name="src_data_id", type="integer")
+     */
+    private $SrcDataId;
+    
+    /**
+     * @var integer $SrcCatId
+     * 
+     * @ORM\Column(name="src_cat_id", type="integer")
+     */
+    private $SrcCatId;
+
+    /**
+     * @var datetime $CreatedAt
+     *
+     * @ORM\Column(name="created_at", type="datetime")
+     */
+    private $CreatedAt;
+
+    /**
+     * @var datetime $EditedAt
+     *
+     * @ORM\Column(name="edited_at", type="datetime")
+     */
+    private $EditedAt;
+
+    /**
+     * @var datetime $ValidatedAt
+     *
+     * @ORM\Column(name="validate_at", type="datetime")
+     */
+    private $ValidatedAt;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set SrcCatId
+     *
+     * @param integer $srcCatId
+     */
+    public function setSrcCatId($srcCatId)
+    {
+        $this->SrcCatId = $srcCatId;
+    }
+
+    /**
+     * Get SrcCatId
+     *
+     * @return integer 
+     */
+    public function getSrcCatId()
+    {
+        return $this->SrcCatId;
+    }
+
+    /**
+     * Set CreatedAt
+     *
+     * @param datetime $createdAt
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->CreatedAt = $createdAt;
+    }
+
+    /**
+     * Get CreatedAt
+     *
+     * @return datetime 
+     */
+    public function getCreatedAt()
+    {
+        return $this->CreatedAt;
+    }
+
+    /**
+     * Set EditedAt
+     *
+     * @param datetime $editedAt
+     */
+    public function setEditedAt($editedAt)
+    {
+        $this->EditedAt = $editedAt;
+    }
+
+    /**
+     * Get EditedAt
+     *
+     * @return datetime 
+     */
+    public function getEditedAt()
+    {
+        return $this->EditedAt;
+    }
+
+    /**
+     * Set ValidatedAt
+     *
+     * @param datetime $validatedAt
+     */
+    public function setValidatedAt($validatedAt)
+    {
+        $this->ValidatedAt = $validatedAt;
+    }
+
+    /**
+     * Get ValidatedAt
+     *
+     * @return datetime 
+     */
+    public function getValidatedAt()
+    {
+        return $this->ValidatedAt;
+    }
+}

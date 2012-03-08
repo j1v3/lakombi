@@ -1,0 +1,27 @@
+{% extends '::base.html.twig' %}
+{% block title %}{% if user.id %}{{ 'Edit user'|trans }}{% elseif 'newz' %}{{ 'Newzletter'|trans }}{% else %}{{ 'Add user'|trans }}{% endif %}{% endblock %}
+
+{% block body %}
+<form action="{% if user.id %}{{ path('user_edit', {'userId':user.id}) }}{% else %}{{ path('user_add') }}{% endif %}" method="post" {{ form_enctype(form) }}>
+    <h1>{% if user.id %}{{ 'Edit user'|trans }}{% else %}{{ 'Add user'|trans }}{% endif %}</h1>
+    <div>
+    {{ form_errors(form.name) }}
+    {{ form_label(form.name, 'Name'|trans) }}
+    {{ form_widget(form.name) }}
+    </div>
+    <div>
+    {{ form_errors(form.surname) }}
+    {{ form_label(form.surname, 'Surname'|trans) }}
+    {{ form_widget(form.surname) }}
+    </div>
+    <div>
+    {{ form_errors(form.nickname) }}
+    {{ form_label(form.nickname, 'Nickname'|trans) }}
+    {{ form_widget(form.nickname) }}
+    </div>
+    
+    {{ form_rest(form) }}
+    <input type="submit" id="submit" value="{% if user.id %}{{ 'Update'|trans }}{% else %}{{ 'Add'|trans }}{% endif %}" name="submit" />
+</form>
+
+{% endblock %}

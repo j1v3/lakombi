@@ -1,0 +1,52 @@
+.carrousel{
+	position:relative;
+	overflow:hidden;
+}
+
+.carrousel .interieur-carrousel
+{
+	position:relative;
+	overflow:hidden;
+}
+
+.carrousel .items{
+	position:absolute;
+	top:0;
+	left:0;
+	width: 10000px;
+}
+.carrousel .item{
+	display:block;
+	float:left;
+}
+
+.carrousel .temoins{
+	position:absolute;
+	bottom:0;
+	left:0;
+	text-align:center;
+	width:100%;
+}
+.carrousel .temoins img{
+	padding-left:5px;
+}
+
+#sponsors{
+width:500px; /* la largeur totale du carrousel */
+height:140px;	/* la hauteur totale du carrousel (prévoir la place pour le div.temoins) */
+}
+
+#sponsors .interieur-carrousel
+{
+margin-left:0px; /* décalage entre le début du caroussel et l'endroit où disparaissent les images */
+margin-top:0px; /* décalage par rapport à en haut du carrousel */
+width: 500px; /* la largeur de l'interieur = (largeur d'un item + margin right d'un item)*(nombres d'item étant apparants en même
+temps) */
+height:140px;	/* la hauteur d'un item */
+}
+
+#sponsors .item{
+width:160px;	/* la largeur d'un item */
+margin-right:13px; /* son espacement éventuel par rapport à l'item suivant */
+height:119px; /* la hauteur d'un item */
+}

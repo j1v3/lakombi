@@ -1,0 +1,54 @@
+{# src/LaKombi/MainBundle/Resources/views/Main/contact.html.twig #}
+{% extends '::base.html.twig' %}
+
+{% block title %}
+    {{ parent() }}
+    - Contact
+{% endblock %}
+
+{% block body %}
+{% if app.session.hasFlash('contact-notice') %}
+    <div class="contact-notice">
+        {{ app.session.flash('contact-notice') }}
+    </div>
+{% endif %}
+<table>
+	<tr>
+		<td><h1>Contact LaKombi.com</h1></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td><h3>Envoyez un message à Seb LaKombi en remplissant ce formulaire :</h3></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>	
+		    <form action="{{ path('LaKombiMainBundle_contact') }}" method="post" {{ form_enctype(form) }} class="contact">
+        	{{ form_errors(form) }}
+
+	        {{ form_row(form.name, { 'label': 'Nom : '}) }}
+    	    {{ form_row(form.email, { 'label': 'Mail : '}) }}
+    	    {{ form_row(form.subject, { 'label': 'Sujet : '}) }}
+    	    {{ form_row(form.body, { 'label': 'Message : '}) }}
+
+    	    {{ form_rest(form) }}
+
+    	    <input type="submit" value="Envoyer" />
+   			</form>
+    	</td>
+    </tr>
+</table>
+{% endblock %}

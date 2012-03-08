@@ -1,0 +1,38 @@
+LaKombiMainBundle:
+    resource: "@LaKombiMainBundle/Controller/"
+    type:     annotation
+    prefix:   /
+    defaults: { _controller: LaKombiMainBundle:Default:index }
+
+LaKombiMainBundle_home:
+    pattern:  /home
+    defaults: { _controller: LaKombiMainBundle:Main:home }
+        
+LaKombiMainBundle_news:
+    pattern:  /news
+    defaults: { _controller: LaKombiMainBundle:Main:news }
+
+LaKombiMainBundle_about:
+    pattern:  /access
+    defaults: { _controller: LaKombiMainBundle:Main:about }
+
+LaKombiMainBundle_contact:
+    pattern:  /contact
+    defaults: { _controller: LaKombiMainBundle:Main:contact }
+    requirements:
+        _method:  GET|POST
+        
+LaKombiResourcesBundle:
+    resource: "@LaKombiResourcesBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+LaKombiUsersBundle:
+    resource: "@LaKombiUsersBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+# Internal routing configuration to handle ESI
+#_internal:
+#   resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
+#   prefix:   /_internal

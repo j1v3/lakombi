@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Language" content="fr, en" />
+        <meta name="author" content="webmaster@lakombi.com" />
+        <meta name="category" content="Musique, Rap, Label Independant" />
+        <meta name="copyright" content="lakombi.com" />
+        <meta name="description" content="Rap français indépendant, site du label LaKombi.Prod : News, Téléchargement Mixtape, Boutique, Clips" />
+        <meta name="keywords" content="Musique, Rap, Label Independant, Français, News, Telechargement, Mixtape, Boutique, Clips" />
+        <meta name="publisher" content="lakombi.com" />
+        <meta name="revisit-after" content="15 days" />
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="noarchive" />
+        <meta name="pragma" content="no-cache" />
+                
+        <title>{% block title %}LaKombi.com{% endblock %}</title>
+        {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('bundles/lakombimain/css/main.css') }}" type="text/css" media="all" />
+        <link rel="stylesheet" href="{{ asset('bundles/lakombimain/css/lakombi.css') }}" type="text/css" media="all" />
+        <link rel="stylesheet" href="{{ asset('bundles/lakombimain/css/carrousel.css') }}" type="text/css" media="all" />
+       {% endblock %}
+        <script type="text/javascript" src="{{ asset('bundles/lakombimain/js/jquery.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/lakombimain/js/carrousel.js') }}"></script>
+        <script type="text/javascript">
+		$(document).ready(
+			function(){
+				carrousel('sponsors',160,3,3000,1000,'left','{{ asset('bundles/lakombimain/images/on.png') }}','{{ asset('bundles/lakombimain/images/off.png') }}');
+			}
+		);
+		</script>
+    </head>
+    <body id="bg_lakombi">
+
+        <div id="nonfooter">
+        	<table width="1196" border="0" align="center">
+        		<tr>
+        			<td>
+						<table style="border-collapse: collapse; border-width: 0px" >
+							<tr>
+								<td>
+		        				{% include 'LaKombiMainBundle:Main:header.html.twig' %}
+		        				</td>
+		      				</tr>
+		      				<tr>
+		      					<td>
+		      					{% include 'LaKombiMainBundle:Main:menu.html.twig' %}
+		      					</td>
+		      				</tr>
+		      			</table>  			
+		        	</td>
+        		</tr>
+        		<tr>
+ 					<td>&nbsp;</td>
+        		</tr>
+        		<tr>
+        			<td valign="top" width="1196px">
+        			{% block body %}{% endblock %}
+        			</td>
+        		<tr>
+        			<td>&nbsp;</td>
+        		</tr>
+        	</table>
+        </div>
+        {% block javascripts %}
+        {% endblock %}
+        {% include 'LaKombiMainBundle:Main:sponsors.html.twig' %}        
+        {% include 'LaKombiMainBundle:Main:footer.html.twig' %}        
+    </body>
+</html>

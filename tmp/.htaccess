@@ -1,0 +1,25 @@
+Options -MultiViews
+ 
+# Règles de réécriture pour Zend Framework
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule .* web/app_dev.php
+ 
+# Sécurité : Ne pas autoriser le parcours de répertoires
+Options -Indexes
+ 
+# "active" PHP5
+AddType x-mapp-php5 .php
+SetEnv PHP_VER 5
+ 
+# Désactive le paramètre register_globals
+SetEnv REGISTER_GLOBALS 0
+# Désactive le paramètre magic_quotes_gcp
+SetEnv MAGIC_QUOTES 0
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+RewriteRule ^.*$ index.php [NC,L]

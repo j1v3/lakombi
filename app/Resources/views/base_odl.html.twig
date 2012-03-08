@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Language" content="fr, en" />
+        <meta name="author" content="webmaster@lakombi.com" />
+        <meta name="category" content="Musique, Rap, Label Independant" />
+        <meta name="copyright" content="lakombi.com" />
+        <meta name="description" content="Rap français indépendant, site du label LaKombi.Prod : News, Téléchargement Mixtape, Boutique, Clips" />
+        <meta name="keywords" content="Musique, Rap, Label Independant, Français, News, Telechargement, Mixtape, Boutique, Clips" />
+        <meta name="publisher" content="lakombi.com" />
+        <meta name="revisit-after" content="15 days" />
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="noarchive" />
+        <meta name="pragma" content="no-cache" />
+                
+        <title>{% block title %}LaKombi.com{% endblock %}</title>
+        {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('bundles/lakombimain/css/main.css') }}" type="text/css" media="all" />
+        <link rel="stylesheet" href="{{ asset('bundles/lakombimain/css/lakombi.css') }}" type="text/css" media="all" />
+        {% endblock %}
+        <script type="text/javascript" src="{{ asset('bundles/lakombimain/js/banner.js') }}"></script>
+    </head>
+    <body>
+
+        <div id="nonfooter">
+        	<table width="100%" border="0">
+        		<tr>
+        			<td align="center" valign="top"><img width="300px" height="237px" src="{{ asset('bundles/lakombimain/images/logo-k.png') }}" /></td>
+ 					<td>&nbsp;</td>
+        			<td>{% include 'LaKombiMainBundle:Main:header.html.twig' %}</td>
+        		</tr>
+        		<tr>
+        			<td colspan="3">&nbsp;</td>
+        		</tr>
+        		<tr>
+        			<td height="100%" valign="top">{% include 'LaKombiMainBundle:Main:menu.html.twig' %}</td>
+ 					<td>&nbsp;</td>
+ 					<td valign="top">
+        			{% block body %}{% endblock %}
+        			</td>
+        		<tr>
+        			<td colspan="3">&nbsp;</td>
+        		</tr>
+        	</table>
+        </div>
+
+        {% block javascripts %}
+        {% endblock %}
+
+        {% include 'LaKombiMainBundle:Main:footer.html.twig' %}        
+    </body>
+</html>

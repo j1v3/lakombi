@@ -1,0 +1,4 @@
+# src/LaKombi/MainBundle/Resources/config/config.yml
+parameters:
+    # LaKombi contact email address
+    lakombi_main.emails.contact_email: jeremy@klubify.com

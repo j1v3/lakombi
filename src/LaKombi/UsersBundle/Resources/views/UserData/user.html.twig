@@ -1,0 +1,17 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}
+    {{ parent() }}
+    - {{ user.name }}
+{% endblock %}
+
+{% block body %}
+    <h1>{{ user.name }}</h1>
+    <p>
+        {{ user.adress1 }}
+    </p>
+    <p>
+        {{ user.nickname }}
+    </p>
+    <a href="{{ path("homepage") }}">Retour à l'accueil</a>
+{% endblock %}

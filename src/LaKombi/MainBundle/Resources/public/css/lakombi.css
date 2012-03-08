@@ -1,0 +1,84 @@
+/* background */
+#bg_lakombi {
+	background-image:url(../images/background.png);
+	background-repeat:repeat-x;
+	background-position:top; }
+	
+#bg_cnt {
+	background-image:url(../images/footer_back.png);
+	background-repeat:no-repeat;
+	background-position:bottom right; }
+	
+/* header */
+#logo {
+	float: left;
+    margin-left: 0px;
+    z-index:2; }
+    
+#top {
+	background-image:url(../images/top.png);
+	background-repeat:no-repeat;
+	background-position:top left;
+	margin-left: 0px;
+	z-index: -2;
+}	
+
+/* menu */
+#bar {	
+	margin-left: 0px;
+	margin-top: -50px;
+	z-index: -4; }	
+
+#menu { background-color: #ffffff;
+		border-collapse: collapse;
+	    border-width: 0px;
+        padding: 5px; }
+
+#amenu:link { text-decoration: none;
+	     font-size: 16px;
+		 color: #000000; }
+
+#amenu:visited { text-decoration: none;
+	     font-size: 16px;
+		 color: #000000; }
+		 		 
+#amenu:hover { text-decoration: none;
+	      font-size: 16px;
+		  color: #ffffff;
+		  background-color: #d30000;
+		  border-bottom : 5px; }
+          		 		 		 
+/* footer */
+#nonfooter { position: relative;
+		     min-height: 100%;
+		     border-collapse: collapse; }
+
+* html #nonfooter { height: 100%; }
+
+#footer { background-color: #262626;
+  		  width: 1000px;
+  		  height: 40px;
+  		  margin-left: 10%;
+  		  margin-right: auto;
+  		  font-size: 12px;
+	 	  border: 1px solid #000000;
+ 		  padding: 5px;
+		  border-radius:10px 0; 
+		  -moz-border-radius:10px 0;
+		  -webkit-border-radius:10px 0; 
+		  box-shadow:5px 5px 15px gray;
+		  -moz-box-shadow:5px 5px 15px gray;
+          -webkit-box-shadow:5px 5px 15px gray;
+}
+
+/* contact */
+.contact-notice { text-align: center; padding: 10px; background: #DFF2BF; border: 1px solid; color: #4F8A10; margin-bottom: 10px; }
+form.contact { font-size: 16px; }
+form.contact div { clear: left; margin-bottom: 10px; }
+form.contact label { float: left; margin-right: 10px; text-align: right; width: 100px; font-weight: bold; vertical-align: top; padding-top: 10px; }
+form.contact input[type="text"],
+form.contact input[type="email"]
+    { width: 500px; line-height: 26px; font-size: 20px; min-height: 26px; }
+form.contact textarea { width: 500px; height: 150px; line-height: 26px; font-size: 20px; }
+form.contact input[type="submit"] { margin-left: 110px; width: 508px; line-height: 26px; font-size: 20px; min-height: 26px; }
+form.contact ul li { color: #ff0000; margin-bottom: 5px; }
