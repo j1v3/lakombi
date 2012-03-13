@@ -11,23 +11,30 @@
 	
 /* header */
 #logo {
+	position: relative;
 	float: left;
     margin-left: 0px;
-    z-index:2; }
+    z-index: 10; }
     
 #top {
 	background-image:url(../images/top.png);
 	background-repeat:no-repeat;
 	background-position:top left;
 	margin-left: 0px;
-	z-index: -2;
+	z-index: -5;
 }	
+
+/* body */
+#body { align:center;
+  		  margin-left: auto;
+  		  margin-right: auto; }
 
 /* menu */
 #bar {	
+	position: relative;
 	margin-left: 0px;
 	margin-top: -50px;
-	z-index: -4; }	
+	z-index: 0; }	
 
 #menu { background-color: #ffffff;
 		border-collapse: collapse;

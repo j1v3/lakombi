@@ -65,11 +65,12 @@ class __TwigTemplate_d88420d49bfa0c91550a6863d3e97850 extends Twig_Template
 \t\t</script>
     </head>
     <body id=\"bg_lakombi\">
+    <center>
         ";
-        // line 36
+        // line 37
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 38
-        echo "        <div id=\"\">
+        // line 39
+        echo "        <div align=\"center\">
         \t<table width=\"1196px\" style=\"border-collapse: collapse; border-width: 0px\" align=\"center\">
         \t\t<tr>
         \t\t\t<td>
@@ -77,17 +78,17 @@ class __TwigTemplate_d88420d49bfa0c91550a6863d3e97850 extends Twig_Template
 \t\t\t\t\t\t\t<tr>
 \t\t\t\t\t\t\t\t<td>
 \t\t        \t\t\t\t";
-        // line 45
-        $this->env->loadTemplate("LaKombiMainBundle:Main:header.html.twig")->display($context);
         // line 46
+        $this->env->loadTemplate("LaKombiMainBundle:Main:header.html.twig")->display($context);
+        // line 47
         echo "\t\t        \t\t\t\t</td>
 \t\t      \t\t\t\t</tr>
 \t\t      \t\t\t\t<tr>
 \t\t      \t\t\t\t\t<td>
 \t\t      \t\t\t\t\t";
-        // line 50
-        $this->env->loadTemplate("LaKombiMainBundle:Main:menu.html.twig")->display($context);
         // line 51
+        $this->env->loadTemplate("LaKombiMainBundle:Main:menu.html.twig")->display($context);
+        // line 52
         echo "\t\t      \t\t\t\t\t</td>
 \t\t      \t\t\t\t</tr>
 \t\t      \t\t\t</table>  \t\t\t
@@ -100,18 +101,18 @@ class __TwigTemplate_d88420d49bfa0c91550a6863d3e97850 extends Twig_Template
         \t\t\t<td valign=\"top\" width=\"1196px\" id=\"bg_cnt\">
         \t\t\t\t<table style=\"border-collapse: collapse; border-width: 0px\" >
 \t\t\t\t\t\t\t<tr>
-\t\t\t\t\t\t\t\t<td width=\"294px\">
+\t\t\t\t\t\t\t\t<td width=\"294px\" valign=\"top\">
 \t\t        \t\t\t\t";
-        // line 64
-        $this->env->loadTemplate("LaKombiMainBundle:Main:teaser.html.twig")->display($context);
         // line 65
+        $this->env->loadTemplate("LaKombiMainBundle:Main:teaser.html.twig")->display($context);
+        // line 66
         echo "\t\t        \t\t\t\t</td>
 \t\t        \t\t\t\t<td width=\"13px\">&nbsp;</td>
-\t\t      \t\t\t\t\t<td width=\"889px\" align=\"right\">
+\t\t      \t\t\t\t\t<td width=\"889px\" align=\"right\" valign=\"top\">
 \t\t\t        \t\t\t";
-        // line 68
-        $this->displayBlock('body', $context, $blocks);
         // line 69
+        $this->displayBlock('body', $context, $blocks);
+        // line 70
         echo "\t\t      \t\t\t\t\t</td>
 \t\t      \t\t\t\t</tr>
 \t\t      \t\t\t</table>  \t\t\t
@@ -121,18 +122,19 @@ class __TwigTemplate_d88420d49bfa0c91550a6863d3e97850 extends Twig_Template
         \t\t</tr>
         \t\t<tr>
         \t\t\t<td>";
-        // line 77
+        // line 78
         $this->env->loadTemplate("LaKombiMainBundle:Main:sponsors.html.twig")->display($context);
         echo "</td>
         \t\t</tr>
         \t\t<tr>
         \t\t\t<td>";
-        // line 80
+        // line 81
         $this->env->loadTemplate("LaKombiMainBundle:Main:footer.html.twig")->display($context);
         echo "</td>
         \t\t</tr>
         \t</table>
         </div>
+        </center>
     </body>
 </html>
 ";
@@ -162,14 +164,14 @@ class __TwigTemplate_d88420d49bfa0c91550a6863d3e97850 extends Twig_Template
        ";
     }
 
-    // line 36
+    // line 37
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 37
+        // line 38
         echo "        ";
     }
 
-    // line 68
+    // line 69
     public function block_body($context, array $blocks = array())
     {
     }

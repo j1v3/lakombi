@@ -33,9 +33,10 @@
 		</script>
     </head>
     <body id="bg_lakombi">
+    <center>
         {% block javascripts %}
         {% endblock %}
-        <div id="">
+        <div align="center">
         	<table width="1196px" style="border-collapse: collapse; border-width: 0px" align="center">
         		<tr>
         			<td>
@@ -60,11 +61,11 @@
         			<td valign="top" width="1196px" id="bg_cnt">
         				<table style="border-collapse: collapse; border-width: 0px" >
 							<tr>
-								<td width="294px">
+								<td width="294px" valign="top">
 		        				{% include 'LaKombiMainBundle:Main:teaser.html.twig' %}
 		        				</td>
 		        				<td width="13px">&nbsp;</td>
-		      					<td width="889px" align="right">
+		      					<td width="889px" align="right" valign="top">
 			        			{% block body %}{% endblock %}
 		      					</td>
 		      				</tr>
@@ -81,5 +82,6 @@
         		</tr>
         	</table>
         </div>
+        </center>
     </body>
 </html>

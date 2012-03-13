@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Juice';
     src: url('../fonts/JUICE___.eot');
-    src: url('../fonts/JUICE___eot') format('embedded-opentype'),
+    src: url('../fonts/JUICE___.eot') format('embedded-opentype'),
          url('../fonts/JUICE___.woff') format('woff'),
          url('../fonts/JUICE___.ttf') format('truetype'),
          url('../fonts/JUICE___.svg#AmsterdamGraffitiRegular') format('svg');
@@ -62,6 +62,6 @@ a:focus { text-decoration: none;
 		   font-size: 14px;
 		   color: #ffffff; }
 		   
-img a:link , a:visited, a:hover , a:active {border-width : 0; }
+img { border : 0; }
 		   
-		   
+input { font-family: "Juice"; }		   
