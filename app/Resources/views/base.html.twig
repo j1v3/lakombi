@@ -33,9 +33,10 @@
 		</script>
     </head>
     <body id="bg_lakombi">
-
-        <div id="nonfooter">
-        	<table width="1196" border="0" align="center">
+        {% block javascripts %}
+        {% endblock %}
+        <div id="">
+        	<table width="1196px" style="border-collapse: collapse; border-width: 0px" align="center">
         		<tr>
         			<td>
 						<table style="border-collapse: collapse; border-width: 0px" >
@@ -56,17 +57,29 @@
  					<td>&nbsp;</td>
         		</tr>
         		<tr>
-        			<td valign="top" width="1196px">
-        			{% block body %}{% endblock %}
+        			<td valign="top" width="1196px" id="bg_cnt">
+        				<table style="border-collapse: collapse; border-width: 0px" >
+							<tr>
+								<td width="294px">
+		        				{% include 'LaKombiMainBundle:Main:teaser.html.twig' %}
+		        				</td>
+		        				<td width="13px">&nbsp;</td>
+		      					<td width="889px" align="right">
+			        			{% block body %}{% endblock %}
+		      					</td>
+		      				</tr>
+		      			</table>  			
         			</td>
         		<tr>
         			<td>&nbsp;</td>
         		</tr>
+        		<tr>
+        			<td>{% include 'LaKombiMainBundle:Main:sponsors.html.twig' %}</td>
+        		</tr>
+        		<tr>
+        			<td>{% include 'LaKombiMainBundle:Main:footer.html.twig' %}</td>
+        		</tr>
         	</table>
         </div>
-        {% block javascripts %}
-        {% endblock %}
-        {% include 'LaKombiMainBundle:Main:sponsors.html.twig' %}        
-        {% include 'LaKombiMainBundle:Main:footer.html.twig' %}        
     </body>
 </html>

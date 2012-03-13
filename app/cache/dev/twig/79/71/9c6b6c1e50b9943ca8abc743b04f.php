@@ -38,14 +38,14 @@ class __TwigTemplate_79719c6b6c1e50b9943ca8abc743b04f extends Twig_Template
     public function block_body($context, array $blocks = array())
     {
         // line 9
-        echo "\t<table width=\"100%\" border=\"0\">
+        echo "\t<table width=\"100%\" border=\"0\" align=\"right\">
 \t\t<tr>
- \t\t <td valign=\"top\">";
+ \t\t <td valign=\"top\" align=\"right\">";
         // line 11
         $this->env->loadTemplate("LaKombiMainBundle:Main:clip.html.twig")->display($context);
         echo "</td>
-         <td>&nbsp;</td>
- \t\t <td valign=\"top\" rowspan=\"2\">";
+         <td width=\"13px\">&nbsp;</td>
+ \t\t <td valign=\"top\" rowspan=\"2\" align=\"right\">";
         // line 13
         $this->env->loadTemplate("LaKombiMainBundle:Main:gallery.html.twig")->display($context);
         echo "</td>
