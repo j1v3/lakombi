@@ -36,7 +36,8 @@
 	margin-top: -50px;
 	z-index: 0; }	
 
-#menu { background-color: #ffffff;
+#menu { font-family: 'Juice';
+		background-color: #ffffff;
 		border-collapse: collapse;
 	    border-width: 0px;
         padding: 5px; }
@@ -62,7 +63,8 @@
 
 * html #nonfooter { height: 100%; }
 
-#footer { background-color: #262626;
+#footer { font-family: 'Juice';
+		  background-color: #262626;
   		  width: 1000px;
   		  height: 40px;
   		  margin-left: auto;

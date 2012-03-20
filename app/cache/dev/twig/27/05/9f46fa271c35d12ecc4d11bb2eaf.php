@@ -42,7 +42,7 @@ class __TwigTemplate_27059f46fa271c35d12ecc4d11bb2eaf extends Twig_Template
 \t\t\t\t<form>
 \t\t\t\t\t<table>
 \t\t\t\t\t\t<tr>
-\t\t\t\t\t\t\t<td><textarea rows=\"9\" style=\"width: 700px; font-family: 'Juice';\"></textarea></td>
+\t\t\t\t\t\t\t<td><textarea rows=\"9\" style=\"width: 700px\"></textarea></td>
 \t\t\t\t\t\t</tr>
 \t\t\t\t\t\t<tr>
 \t\t\t\t\t\t\t<td align=\"right\"><input type=\"submit\" value=\"Postes\"></td>
